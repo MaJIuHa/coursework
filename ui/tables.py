@@ -1,3 +1,8 @@
+from PyQt5 import QtWidgets, QtGui
+from db.core import PGSession
+from db.models import Client, Booking, Room, Hotel, Review
+from sqlalchemy import select
+
 class ClientTable(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()

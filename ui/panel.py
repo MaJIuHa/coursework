@@ -1,7 +1,9 @@
 from PyQt5 import QtWidgets, QtGui
-from site_copy.db.core import PGSession
-from windows import StaffManagementWindow, SystemSettingsWindow, ReportsWindow
-from tables import RoomTable, BookingTable, ClientTable, HotelTable, ReviewTable
+from db.core import PGSession
+from db.models import Hotel, Room, Users
+from ui.windows import StaffManagementWindow, SystemSettingsWindow, ReportsWindow
+from ui.tables import RoomTable, BookingTable, ClientTable, HotelTable, ReviewTable
+from sqlalchemy import select
 
 class SuperAdminPanel(QtWidgets.QWidget):
     def __init__(self):
